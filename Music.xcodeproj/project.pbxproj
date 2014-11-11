@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		62734DBA1A106BBE0036E8EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62734DB91A106BBE0036E8EA /* main.m */; };
 		62734DBD1A106BBE0036E8EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62734DBC1A106BBE0036E8EA /* AppDelegate.m */; };
-		62734DC01A106BBE0036E8EA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62734DBF1A106BBE0036E8EA /* FirstViewController.m */; };
-		62734DC31A106BBE0036E8EA /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62734DC21A106BBE0036E8EA /* SecondViewController.m */; };
 		62734DC61A106BBE0036E8EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62734DC41A106BBE0036E8EA /* Main.storyboard */; };
 		62734DC81A106BBE0036E8EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62734DC71A106BBE0036E8EA /* Images.xcassets */; };
 		62734DCB1A106BBE0036E8EA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62734DC91A106BBE0036E8EA /* LaunchScreen.xib */; };
 		62734DD71A106BBE0036E8EA /* MusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62734DD61A106BBE0036E8EA /* MusicTests.m */; };
+		62734DE11A106BE60036E8EA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62734DE01A106BE60036E8EA /* MediaPlayer.framework */; };
+		62734DE41A106F680036E8EA /* SongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62734DE31A106F680036E8EA /* SongsViewController.m */; };
+		62734DE71A1085090036E8EA /* AlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62734DE61A1085090036E8EA /* AlbumsViewController.m */; };
+		62734DEA1A1087750036E8EA /* No-artwork-albums.png in Resources */ = {isa = PBXBuildFile; fileRef = 62734DE81A1087750036E8EA /* No-artwork-albums.png */; };
+		62734DEB1A1087750036E8EA /* No-artwork-albums@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62734DE91A1087750036E8EA /* No-artwork-albums@2x.png */; };
+		62734DEE1A1094C00036E8EA /* AlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62734DED1A1094C00036E8EA /* AlbumViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,16 +37,21 @@
 		62734DB91A106BBE0036E8EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		62734DBB1A106BBE0036E8EA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		62734DBC1A106BBE0036E8EA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		62734DBE1A106BBE0036E8EA /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		62734DBF1A106BBE0036E8EA /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		62734DC11A106BBE0036E8EA /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		62734DC21A106BBE0036E8EA /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		62734DC51A106BBE0036E8EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		62734DC71A106BBE0036E8EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		62734DCA1A106BBE0036E8EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		62734DD01A106BBE0036E8EA /* MusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62734DD51A106BBE0036E8EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62734DD61A106BBE0036E8EA /* MusicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicTests.m; sourceTree = "<group>"; };
+		62734DE01A106BE60036E8EA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		62734DE21A106F680036E8EA /* SongsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongsViewController.h; sourceTree = "<group>"; };
+		62734DE31A106F680036E8EA /* SongsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongsViewController.m; sourceTree = "<group>"; };
+		62734DE51A1085090036E8EA /* AlbumsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumsViewController.h; sourceTree = "<group>"; };
+		62734DE61A1085090036E8EA /* AlbumsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumsViewController.m; sourceTree = "<group>"; };
+		62734DE81A1087750036E8EA /* No-artwork-albums.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "No-artwork-albums.png"; sourceTree = "<group>"; };
+		62734DE91A1087750036E8EA /* No-artwork-albums@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "No-artwork-albums@2x.png"; sourceTree = "<group>"; };
+		62734DEC1A1094C00036E8EA /* AlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumViewController.h; sourceTree = "<group>"; };
+		62734DED1A1094C00036E8EA /* AlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62734DE11A106BE60036E8EA /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +76,7 @@
 		62734DAB1A106BBE0036E8EA = {
 			isa = PBXGroup;
 			children = (
+				62734DE01A106BE60036E8EA /* MediaPlayer.framework */,
 				62734DB61A106BBE0036E8EA /* Music */,
 				62734DD31A106BBE0036E8EA /* MusicTests */,
 				62734DB51A106BBE0036E8EA /* Products */,
@@ -84,16 +95,20 @@
 		62734DB61A106BBE0036E8EA /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				62734DE81A1087750036E8EA /* No-artwork-albums.png */,
+				62734DE91A1087750036E8EA /* No-artwork-albums@2x.png */,
 				62734DBB1A106BBE0036E8EA /* AppDelegate.h */,
 				62734DBC1A106BBE0036E8EA /* AppDelegate.m */,
-				62734DBE1A106BBE0036E8EA /* FirstViewController.h */,
-				62734DBF1A106BBE0036E8EA /* FirstViewController.m */,
-				62734DC11A106BBE0036E8EA /* SecondViewController.h */,
-				62734DC21A106BBE0036E8EA /* SecondViewController.m */,
 				62734DC41A106BBE0036E8EA /* Main.storyboard */,
 				62734DC71A106BBE0036E8EA /* Images.xcassets */,
 				62734DC91A106BBE0036E8EA /* LaunchScreen.xib */,
 				62734DB71A106BBE0036E8EA /* Supporting Files */,
+				62734DE21A106F680036E8EA /* SongsViewController.h */,
+				62734DE31A106F680036E8EA /* SongsViewController.m */,
+				62734DE51A1085090036E8EA /* AlbumsViewController.h */,
+				62734DE61A1085090036E8EA /* AlbumsViewController.m */,
+				62734DEC1A1094C00036E8EA /* AlbumViewController.h */,
+				62734DED1A1094C00036E8EA /* AlbumViewController.m */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -205,7 +220,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				62734DC61A106BBE0036E8EA /* Main.storyboard in Resources */,
+				62734DEA1A1087750036E8EA /* No-artwork-albums.png in Resources */,
 				62734DCB1A106BBE0036E8EA /* LaunchScreen.xib in Resources */,
+				62734DEB1A1087750036E8EA /* No-artwork-albums@2x.png in Resources */,
 				62734DC81A106BBE0036E8EA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,10 +241,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62734DC31A106BBE0036E8EA /* SecondViewController.m in Sources */,
+				62734DE71A1085090036E8EA /* AlbumsViewController.m in Sources */,
+				62734DEE1A1094C00036E8EA /* AlbumViewController.m in Sources */,
 				62734DBD1A106BBE0036E8EA /* AppDelegate.m in Sources */,
-				62734DC01A106BBE0036E8EA /* FirstViewController.m in Sources */,
 				62734DBA1A106BBE0036E8EA /* main.m in Sources */,
+				62734DE41A106F680036E8EA /* SongsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +436,7 @@
 				62734DDC1A106BBE0036E8EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		62734DDD1A106BBE0036E8EA /* Build configuration list for PBXNativeTarget "MusicTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +445,7 @@
 				62734DDF1A106BBE0036E8EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

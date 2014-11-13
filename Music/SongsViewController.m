@@ -10,6 +10,7 @@
 
 @interface SongsViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+- (IBAction)share:(id)sender;
 
 @end
 
@@ -65,6 +66,23 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"didSelect");
+    // 選択されたセルを取得
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    // セルのアクセサリにチェックマークを指定
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"didDeselect");
+
+    // 選択がはずれたセルを取得
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    // セルのアクセサリを解除する（チェックマークを外す）
+    cell.accessoryType = UITableViewCellAccessoryNone;
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -109,4 +127,23 @@
 }
 */
 
+- (IBAction)share:(id)sender {
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+
+    MPMediaQuery *songsQuery = [MPMediaQuery songsQuery];
+    NSArray *songs = [songsQuery items];
+    
+    MPMediaItem *rowItem = [songs objectAtIndex:indexPath.row];
+    
+    NSURL *url = [rowItem valueForProperty:MPMediaItemPropertyAssetURL];
+    
+    NSLog(@"url = %@", url);
+
+    NSArray *objectsToShare = @[url];
+    
+    UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+    
+    // Present the controller
+    [self presentViewController:controller animated:YES completion:nil];
+}
 @end

@@ -58,7 +58,13 @@
                             <outlet property="delegate" destination="IVr-Zo-Wa4" id="fCM-oh-B1s"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Songs" id="yrf-gy-lqj" userLabel="Songs"/>
+                    <navigationItem key="navigationItem" title="Songs" id="yrf-gy-lqj" userLabel="Songs">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="18x-hL-4I9">
+                            <connections>
+                                <action selector="share:" destination="IVr-Zo-Wa4" id="QVS-ej-3dY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="cHZ-4v-FKF" id="Usf-ut-JFI"/>
                     </connections>

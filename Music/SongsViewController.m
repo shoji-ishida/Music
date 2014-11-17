@@ -67,7 +67,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"didSelect");
+    //NSLog(@"didSelect");
     // 選択されたセルを取得
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     // セルのアクセサリにチェックマークを指定
@@ -75,7 +75,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"didDeselect");
+    //NSLog(@"didDeselect");
 
     // 選択がはずれたセルを取得
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];

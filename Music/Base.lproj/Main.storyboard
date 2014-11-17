@@ -17,13 +17,14 @@
                     <connections>
                         <segue destination="ueE-0j-5UZ" kind="relationship" relationship="viewControllers" id="gR0-rd-O5l"/>
                         <segue destination="nTA-bv-rpy" kind="relationship" relationship="viewControllers" id="LPY-Bq-5xo"/>
+                        <segue destination="vSq-8K-grn" kind="relationship" relationship="viewControllers" id="eVW-Ve-WEJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-80" y="276"/>
         </scene>
-        <!--Songs-->
+        <!--iTunes Songs-->
         <scene sceneID="Dn5-dT-JKC">
             <objects>
                 <tableViewController id="IVr-Zo-Wa4" customClass="SongsViewController" sceneMemberID="viewController">
@@ -32,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="h13-3G-wlr" detailTextLabel="8Eu-D6-3BF" style="IBUITableViewCellStyleSubtitle" id="Xqw-bq-ghj">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" textLabel="h13-3G-wlr" detailTextLabel="8Eu-D6-3BF" style="IBUITableViewCellStyleSubtitle" id="Xqw-bq-ghj">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xqw-bq-ghj" id="HtB-zH-t8d">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -58,7 +59,7 @@
                             <outlet property="delegate" destination="IVr-Zo-Wa4" id="fCM-oh-B1s"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Songs" id="yrf-gy-lqj" userLabel="Songs">
+                    <navigationItem key="navigationItem" title="iTunes Songs" id="yrf-gy-lqj" userLabel="Songs">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="18x-hL-4I9">
                             <connections>
                                 <action selector="share:" destination="IVr-Zo-Wa4" id="QVS-ej-3dY"/>
@@ -73,7 +74,7 @@
             </objects>
             <point key="canvasLocation" x="1482" y="-440"/>
         </scene>
-        <!--Albums-->
+        <!--iTunes Albums-->
         <scene sceneID="ZWG-V9-1W4">
             <objects>
                 <tableViewController id="hX2-Mv-PuT" customClass="AlbumsViewController" sceneMemberID="viewController">
@@ -82,7 +83,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="QTK-F1-F3B" detailTextLabel="tQC-6F-WWi" style="IBUITableViewCellStyleSubtitle" id="M2X-c8-XWQ">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="QTK-F1-F3B" detailTextLabel="tQC-6F-WWi" style="IBUITableViewCellStyleSubtitle" id="M2X-c8-XWQ">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M2X-c8-XWQ" id="wKY-lz-qCW">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -111,7 +112,7 @@
                             <outlet property="delegate" destination="hX2-Mv-PuT" id="F0K-vD-KNn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Albums" id="sDp-Jm-G1x" userLabel="Albums"/>
+                    <navigationItem key="navigationItem" title="iTunes Albums" id="sDp-Jm-G1x" userLabel="Albums"/>
                     <connections>
                         <outlet property="tableView" destination="t0W-ag-9LI" id="2rz-bK-hal"/>
                     </connections>
@@ -119,6 +120,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vVq-Or-K2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1482" y="276"/>
+        </scene>
+        <!--Local Songs-->
+        <scene sceneID="ZZT-4u-WKy">
+            <objects>
+                <tableViewController id="AAs-G0-HRo" customClass="LocalSongsViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="iNz-51-kcm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" id="ptR-bu-leP">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ptR-bu-leP" id="OI5-Bo-LwL">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="AAs-G0-HRo" id="W1b-iB-U4D"/>
+                            <outlet property="delegate" destination="AAs-G0-HRo" id="vrn-ma-9aH"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Local Songs" id="lYc-MF-Re9" userLabel="Local Musics">
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" systemItem="pause" id="ars-1e-3Ih">
+                            <connections>
+                                <action selector="pause:" destination="AAs-G0-HRo" id="bCC-vJ-y4R"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="pauseButton" destination="ars-1e-3Ih" id="MYZ-JU-p9p"/>
+                        <outlet property="tableView" destination="iNz-51-kcm" id="YZK-lV-RVp"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2iQ-Vf-p63" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1482" y="1066"/>
+        </scene>
+        <!--Local Songs-->
+        <scene sceneID="OpV-J7-gBX">
+            <objects>
+                <navigationController id="vSq-8K-grn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Local Songs" id="pkP-9O-2fR"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ttU-6Z-Gv0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="AAs-G0-HRo" kind="relationship" relationship="rootViewController" id="gKp-KG-LZT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TS7-qg-qs1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="752" y="1066"/>
         </scene>
         <!--Album View Controller-->
         <scene sceneID="31r-sd-J0v">
@@ -187,11 +244,11 @@
             </objects>
             <point key="canvasLocation" x="2235" y="265"/>
         </scene>
-        <!--Albums-->
+        <!--iTunes Albums-->
         <scene sceneID="nYI-5g-Tmo">
             <objects>
                 <navigationController id="nTA-bv-rpy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Albums" id="y90-1u-OG6"/>
+                    <tabBarItem key="tabBarItem" title="iTunes Albums" id="y90-1u-OG6"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aYG-43-gY9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -204,11 +261,11 @@
             </objects>
             <point key="canvasLocation" x="762" y="276"/>
         </scene>
-        <!--Songs-->
+        <!--iTunes Songs-->
         <scene sceneID="277-7s-y5d">
             <objects>
                 <navigationController id="ueE-0j-5UZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Songs" id="AGF-cV-abu"/>
+                    <tabBarItem key="tabBarItem" title="iTunes Songs" id="AGF-cV-abu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="r13-8h-J8D">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

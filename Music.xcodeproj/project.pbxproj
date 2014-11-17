@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		626739101A19894A00083899 /* LocalSongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6267390F1A19894A00083899 /* LocalSongsViewController.m */; };
+		626739121A19CCE700083899 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 626739111A19CCE700083899 /* AVFoundation.framework */; };
 		62734DBA1A106BBE0036E8EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62734DB91A106BBE0036E8EA /* main.m */; };
 		62734DBD1A106BBE0036E8EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62734DBC1A106BBE0036E8EA /* AppDelegate.m */; };
 		62734DC61A106BBE0036E8EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62734DC41A106BBE0036E8EA /* Main.storyboard */; };
@@ -32,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6267390E1A19894A00083899 /* LocalSongsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalSongsViewController.h; sourceTree = "<group>"; };
+		6267390F1A19894A00083899 /* LocalSongsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalSongsViewController.m; sourceTree = "<group>"; };
+		626739111A19CCE700083899 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		62734DB41A106BBE0036E8EA /* Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Music.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62734DB81A106BBE0036E8EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62734DB91A106BBE0036E8EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -59,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				626739121A19CCE700083899 /* AVFoundation.framework in Frameworks */,
 				62734DE11A106BE60036E8EA /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,6 +82,7 @@
 		62734DAB1A106BBE0036E8EA = {
 			isa = PBXGroup;
 			children = (
+				626739111A19CCE700083899 /* AVFoundation.framework */,
 				62734DE01A106BE60036E8EA /* MediaPlayer.framework */,
 				62734DB61A106BBE0036E8EA /* Music */,
 				62734DD31A106BBE0036E8EA /* MusicTests */,
@@ -109,6 +116,8 @@
 				62734DE61A1085090036E8EA /* AlbumsViewController.m */,
 				62734DEC1A1094C00036E8EA /* AlbumViewController.h */,
 				62734DED1A1094C00036E8EA /* AlbumViewController.m */,
+				6267390E1A19894A00083899 /* LocalSongsViewController.h */,
+				6267390F1A19894A00083899 /* LocalSongsViewController.m */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -242,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62734DE71A1085090036E8EA /* AlbumsViewController.m in Sources */,
+				626739101A19894A00083899 /* LocalSongsViewController.m in Sources */,
 				62734DEE1A1094C00036E8EA /* AlbumViewController.m in Sources */,
 				62734DBD1A106BBE0036E8EA /* AppDelegate.m in Sources */,
 				62734DBA1A106BBE0036E8EA /* main.m in Sources */,

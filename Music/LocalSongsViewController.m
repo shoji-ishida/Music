@@ -8,6 +8,7 @@
 
 #import "LocalSongsViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "AppDelegate.h"
 
 @interface LocalSongsViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -44,6 +45,26 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    //Register for notifications about received content
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadFile) name:SavedAudioURLNotification object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:SavedAudioURLNotification object:nil];
+}
+
+- (void)reloadFile {
+    [self.songs removeAllObjects];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    NSURL *directoryURL = [NSURL fileURLWithPath:[paths objectAtIndex:0]];
+    
+    [self searchDirectory:directoryURL];
+    [self.tableView reloadData];
 }
 
 - (void)searchDirectory: (NSURL *)directoryURL {

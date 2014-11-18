@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "LocalSongsViewController.h"
+
+NSString * const SavedAudioURLNotification = @"SavedAudioURL";
 
 @interface AppDelegate ()
 
@@ -46,6 +49,10 @@
   sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     NSLog(@"%@", url);
     NSLog(@"%@", sourceApplication);
+    
+    //Notify Local Songs View Controller to reload file, cuz someone sent an audio file.
+    [[NSNotificationCenter defaultCenter] postNotificationName:SavedAudioURLNotification object:nil];
+    
     return YES;
 }
 @end

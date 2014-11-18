@@ -139,11 +139,33 @@
     
     NSLog(@"url = %@", url);
 
-    NSArray *objectsToShare = @[url];
+    AVURLAsset *urlAsset = [AVURLAsset URLAssetWithURL:url options:nil];
+    AVAssetExportSession *exportSession = [[AVAssetExportSession alloc]
+                                           initWithAsset:urlAsset
+                                           presetName:AVAssetExportPresetPassthrough];
+    exportSession.outputFileType = [[exportSession supportedFileTypes] objectAtIndex:0];
     
-    UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+    NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *filePath = [[docDir stringByAppendingPathComponent:[rowItem valueForProperty:MPMediaItemPropertyTitle]] stringByAppendingPathExtension:@"m4a"];
+    exportSession.outputURL = [NSURL fileURLWithPath:filePath];
     
-    // Present the controller
-    [self presentViewController:controller animated:YES completion:nil];
+    [exportSession exportAsynchronouslyWithCompletionHandler:^{
+        
+        if (exportSession.status == AVAssetExportSessionStatusCompleted) {
+            NSLog(@"export session completed");
+            
+            NSArray *objectsToShare = @[exportSession.outputURL];
+            
+            UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+            
+            // Present the controller
+            [self presentViewController:controller animated:YES completion:nil];
+
+        } else {
+            NSLog(@"export session error");
+        }
+
+    }];
+
 }
 @end

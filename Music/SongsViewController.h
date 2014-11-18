@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface SongsViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 

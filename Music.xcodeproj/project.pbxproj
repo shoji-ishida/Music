@@ -21,6 +21,7 @@
 		62734DEA1A1087750036E8EA /* No-artwork-albums.png in Resources */ = {isa = PBXBuildFile; fileRef = 62734DE81A1087750036E8EA /* No-artwork-albums.png */; };
 		62734DEB1A1087750036E8EA /* No-artwork-albums@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62734DE91A1087750036E8EA /* No-artwork-albums@2x.png */; };
 		62734DEE1A1094C00036E8EA /* AlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62734DED1A1094C00036E8EA /* AlbumViewController.m */; };
+		62E8E6321A1C792E0027A8C4 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 62E8E6311A1C792E0027A8C4 /* ReadMe.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		62734DE91A1087750036E8EA /* No-artwork-albums@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "No-artwork-albums@2x.png"; sourceTree = "<group>"; };
 		62734DEC1A1094C00036E8EA /* AlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumViewController.h; sourceTree = "<group>"; };
 		62734DED1A1094C00036E8EA /* AlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumViewController.m; sourceTree = "<group>"; };
+		62E8E6311A1C792E0027A8C4 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		62734DAB1A106BBE0036E8EA = {
 			isa = PBXGroup;
 			children = (
+				62E8E6311A1C792E0027A8C4 /* ReadMe.txt */,
 				626739111A19CCE700083899 /* AVFoundation.framework */,
 				62734DE01A106BE60036E8EA /* MediaPlayer.framework */,
 				62734DB61A106BBE0036E8EA /* Music */,
@@ -232,6 +235,7 @@
 				62734DEA1A1087750036E8EA /* No-artwork-albums.png in Resources */,
 				62734DCB1A106BBE0036E8EA /* LaunchScreen.xib in Resources */,
 				62734DEB1A1087750036E8EA /* No-artwork-albums@2x.png in Resources */,
+				62E8E6321A1C792E0027A8C4 /* ReadMe.txt in Resources */,
 				62734DC81A106BBE0036E8EA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

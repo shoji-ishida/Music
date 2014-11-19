@@ -166,6 +166,21 @@
             
             UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
             
+            controller.completionWithItemsHandler = ^(NSString *activityType, BOOL completed, NSArray *returnedItems, NSError *activityError) {
+                NSLog(@"completionWithItemsHandler");
+                
+                // remove music file being created for AirDrop
+                NSFileManager* manager = [NSFileManager defaultManager];
+                [manager removeItemAtURL:exportSession.outputURL error:NULL];
+                
+                // deselect music being AirDropped
+                [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+                [self.tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
+            };
+            
+            
+            
+            
             // Present the controller
             [self presentViewController:controller animated:YES completion:nil];
 

@@ -34,6 +34,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    // deselect selected cell
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+    [self.tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -68,18 +76,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //NSLog(@"didSelect");
-    // 選択されたセルを取得
+    // retrive cell selected
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    // セルのアクセサリにチェックマークを指定
+    // set Check accesorry type to selected cell
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
     //NSLog(@"didDeselect");
 
-    // 選択がはずれたセルを取得
+    // retrive cell deselected
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    // セルのアクセサリを解除する（チェックマークを外す）
+    // unset check accesorry type to deselected cell
     cell.accessoryType = UITableViewCellAccessoryNone;
 }
 

@@ -45,6 +45,7 @@ NSString * const SavedAudioURLNotification = @"SavedAudioURL";
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+// AirDropped content ends up calling this method
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     NSLog(@"%@", url);
@@ -53,6 +54,9 @@ NSString * const SavedAudioURLNotification = @"SavedAudioURL";
     //Notify Local Songs View Controller to reload file, cuz someone sent an audio file.
     [[NSNotificationCenter defaultCenter] postNotificationName:SavedAudioURLNotification object:nil];
     
+    UIViewController *viewController = self.window.rootViewController;
+    UITabBarController *controller = (UITabBarController *)viewController;
+    controller.selectedViewController = [controller.viewControllers objectAtIndex:2];
     return YES;
 }
 @end

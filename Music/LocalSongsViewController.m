@@ -50,6 +50,8 @@
 -(void)viewWillAppear:(BOOL)animated {
     //Register for notifications about received content
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadFile) name:SavedAudioURLNotification object:nil];
+    // set EditButton to edit
+    [self setEditing:NO];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -57,6 +59,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:SavedAudioURLNotification object:nil];
 }
 
+// slector for NSNotification to update songs Mutable array.
 - (void)reloadFile {
     [self.songs removeAllObjects];
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -101,6 +104,7 @@
 - (IBAction)pause:(id)sender {
     [self.pauseButton setEnabled:FALSE];
     [self.player pause];
+    //[self.navigationItem.rightBarButtonItem setEnabled:YES];
 }
 
 #pragma mark - Table view data source
@@ -134,6 +138,7 @@
     self.player = [[AVPlayer alloc]initWithURL:url];
     [self.player play];
     [self.pauseButton setEnabled:YES];
+    //[self.navigationItem.rightBarButtonItem setEnabled:NO];
 }
 
 /*

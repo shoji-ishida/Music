@@ -90,12 +90,12 @@
                         error:NULL];
         [url getResourceValue:&isDirectory forKey:NSURLIsDirectoryKey error:NULL];
         if ([isDirectory boolValue]) {
-            //NSLog(@"Directory at %@", localizedName);
+            NSLog(@"Directory at %@", localizedName);
             //[self searchDirectory:url];
         } else {
             NSNumber *isRegularFile = nil;
             [url getResourceValue:&isRegularFile forKey:NSURLIsRegularFileKey error:NULL];
-            //NSLog(@"File %@", localizedName);
+            NSLog(@"File %@", localizedName);
             [self.songs addObject:url];
         }
     }

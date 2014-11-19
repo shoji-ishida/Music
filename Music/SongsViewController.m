@@ -138,6 +138,20 @@
 - (IBAction)share:(id)sender {
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 
+    if (indexPath == nil) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Share" message:@"Select a music to share." preferredStyle:UIAlertControllerStyleAlert];
+        
+        // add confirm button
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Confirm" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            // just simply dismiss
+            return;
+        }]];
+        
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+        return;
+    }
+    
     MPMediaQuery *songsQuery = [MPMediaQuery songsQuery];
     NSArray *songs = [songsQuery items];
     

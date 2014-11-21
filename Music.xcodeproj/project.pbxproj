@@ -21,6 +21,7 @@
 		62734DEA1A1087750036E8EA /* No-artwork-albums.png in Resources */ = {isa = PBXBuildFile; fileRef = 62734DE81A1087750036E8EA /* No-artwork-albums.png */; };
 		62734DEB1A1087750036E8EA /* No-artwork-albums@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62734DE91A1087750036E8EA /* No-artwork-albums@2x.png */; };
 		62734DEE1A1094C00036E8EA /* AlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62734DED1A1094C00036E8EA /* AlbumViewController.m */; };
+		62E8C02F1A1EC9FF003123B5 /* SongURLContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E8C02E1A1EC9FF003123B5 /* SongURLContainer.m */; };
 		62E8E6321A1C792E0027A8C4 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 62E8E6311A1C792E0027A8C4 /* ReadMe.txt */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,8 @@
 		62734DE91A1087750036E8EA /* No-artwork-albums@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "No-artwork-albums@2x.png"; sourceTree = "<group>"; };
 		62734DEC1A1094C00036E8EA /* AlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumViewController.h; sourceTree = "<group>"; };
 		62734DED1A1094C00036E8EA /* AlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumViewController.m; sourceTree = "<group>"; };
+		62E8C02D1A1EC9FF003123B5 /* SongURLContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongURLContainer.h; sourceTree = "<group>"; };
+		62E8C02E1A1EC9FF003123B5 /* SongURLContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongURLContainer.m; sourceTree = "<group>"; };
 		62E8E6311A1C792E0027A8C4 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +124,8 @@
 				62734DED1A1094C00036E8EA /* AlbumViewController.m */,
 				6267390E1A19894A00083899 /* LocalSongsViewController.h */,
 				6267390F1A19894A00083899 /* LocalSongsViewController.m */,
+				62E8C02D1A1EC9FF003123B5 /* SongURLContainer.h */,
+				62E8C02E1A1EC9FF003123B5 /* SongURLContainer.m */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				62734DEE1A1094C00036E8EA /* AlbumViewController.m in Sources */,
 				62734DBD1A106BBE0036E8EA /* AppDelegate.m in Sources */,
 				62734DBA1A106BBE0036E8EA /* main.m in Sources */,
+				62E8C02F1A1EC9FF003123B5 /* SongURLContainer.m in Sources */,
 				62734DE41A106F680036E8EA /* SongsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

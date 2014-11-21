@@ -7,6 +7,7 @@
 //
 
 #import "SongsViewController.h"
+#import "SongURLContainer.h"
 
 @interface SongsViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -176,9 +177,10 @@
         if (exportSession.status == AVAssetExportSessionStatusCompleted) {
             NSLog(@"export session completed");
             
-            NSArray *objectsToShare = @[exportSession.outputURL];
+            //NSArray *objectsToShare = @[exportSession.outputURL];
+            SongURLContainer *objectsToShare = [[SongURLContainer alloc] initWithURL:exportSession.outputURL mediaItem:rowItem];
             
-            UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+            UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:@[objectsToShare] applicationActivities:nil];
             
             controller.completionWithItemsHandler = ^(NSString *activityType, BOOL completed, NSArray *returnedItems, NSError *activityError) {
                 NSLog(@"completionWithItemsHandler");
